@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Paypal for App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Usa questo pulsante per testare i pagamenti con Paypal.
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/paypal.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Esempio</ion-card-subtitle>
+      <ion-card-title>Pagamento con PayPal</ion-card-title>
+      <ion-row>
+        <ion-col>
+          Totale
+        </ion-col>
+        <ion-col>
+          {{moneta}}{{totale}}
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="full" color="success" (click)="pagaConPaypal()">Paga con PayPal</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
