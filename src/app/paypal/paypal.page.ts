@@ -14,8 +14,8 @@ export class PaypalPage {
 
   pagaConPaypal() {
     this.payPal.init({
-      PayPalEnvironmentProduction: 'YOUR_PRODUCTION_CLIENT_ID',
-      PayPalEnvironmentSandbox: 'AQEWlh6KVAMqVwWMwbeDro__MU88dUKdisVCn1DMcp-igKMNWsWW2qvpVEW8KSNq9Zq7Dq_6AqobO6xR'
+      PayPalEnvironmentProduction: '[CLIENT_ID]',
+      PayPalEnvironmentSandbox: '[CLIENT_ID]'
     }).then(() => {
       this.payPal.prepareToRender('PayPalEnvironmentSandbox', new PayPalConfiguration({
       })).then(() => {
@@ -47,6 +47,7 @@ export class PaypalPage {
       });
     }, () => {
       // Altro
+      console.log('Per il corretto funzionamento, è necessario inserire le chiavi CLIENT corrette!');
     });
   }
 }
